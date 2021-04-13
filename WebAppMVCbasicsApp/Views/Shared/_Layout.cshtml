@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <!--härifrån styrs gemensamt innehåll för flera sidor!!-->
+
+    <header>
+        <!--
+    <h1>Logo about here</h1>
+        -->
+        <picture>
+            <img src="/img/logga.jpg" />
+        </picture>
+        <nav>
+            <ul>
+                <li>
+                    @Html.ActionLink("About", "About", "Home")
+                </li>
+                <li>
+                    @Html.ActionLink("Contact", "Contact", "Home")
+                </li>
+                <li>
+                    @Html.ActionLink("Projects", "Projects", "Home")
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        @RenderBody()
+    </div>
+    <footer>
+        <p> &copy; Björn Anders Elfvin  @DateTime.Now.ToShortDateString()</p>
+
+    </footer>
+</body>
+</html>
