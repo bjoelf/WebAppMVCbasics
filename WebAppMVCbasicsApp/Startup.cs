@@ -16,6 +16,12 @@ namespace WebAppMVCbasicsApp
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromSeconds(30);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
             services.AddMvc();
         }
 
@@ -29,6 +35,9 @@ namespace WebAppMVCbasicsApp
 
             app.UseStaticFiles();
             app.UseRouting();
+
+            //for Assignment 3
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {

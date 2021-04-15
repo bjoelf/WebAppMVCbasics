@@ -30,14 +30,16 @@
                     @Html.ActionLink("Projects", "Projects", "Home")
                 </li>
                 <li>
-                    @Html.ActionLink("Fever check", "FeverCheck", "Doctor")
+                    @*  @Html.ActionLink("Fever check", "FeverCheck", "Doctor") *@
 
                     @*              länken                  Controllern     UI text  *@
 
-                    @*   <a asp-action="FeverCheck" asp-controller="Doctor">Fever Check </a> *@
+                    <a asp-action="FeverCheck" asp-controller="Doctor">Fever Check </a>
 
                 </li>
-
+                <li>
+                    <a asp-action="GuessingGame" asp-controller="Game">Guess the correct numer!</a>
+                </li>
                     </ul>
                 </nav>
             </header>

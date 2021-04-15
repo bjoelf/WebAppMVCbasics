@@ -6,15 +6,17 @@ namespace WebAppMVCbasicsApp.Controllers
     public class DoctorController : Controller
     {
         [HttpPost]
-        public IActionResult FeverCheck(string temp)
+        public IActionResult FeverCheck(float temp)
         {
-            if (string.IsNullOrWhiteSpace(temp))
+            if (temp != 0)
             {
-                ViewBag.Msg = "Pls enter your temperaure and then hit Submit";
-                return View();
-            } else {
 
                 ViewBag.Msg = Medical.FeverTest(temp);
+                return View();
+            }
+            else
+            {
+                ViewBag.Msg = "Pls enter your temperaure and then hit Submit";
                 return View();
             }
         }
