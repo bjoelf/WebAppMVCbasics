@@ -23,7 +23,7 @@ namespace WebAppMVCbasicsApp.Models
         public static int GetRandom(int max)
         {
             Random rnd = new Random();
-            return rnd.Next(max);
+            return rnd.Next(1, max);
         }
     }
 }
