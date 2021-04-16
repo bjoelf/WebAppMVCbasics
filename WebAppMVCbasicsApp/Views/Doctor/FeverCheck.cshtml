@@ -6,7 +6,7 @@
 <h2>Fever check</h2>
 
 <form asp-action="FeverCheck" asp-controller="Doctor" method="post">
-    <input type="number" name="temp" value="" placeholder="Enter your temperature" />
+    <input type="number" name="temp" value="" placeholder="Enter your body temperature" min="32" max="43"/>
     <button type="submit">Send</button>
     <p> @if (ViewBag.Msg != null) { @ViewBag.Msg } </p>
 </form>

@@ -9,7 +9,7 @@
 <p>I have stored a number between 1 and 100. Pls take a guess!</p>
 
 <form asp-action="GuessingGame" asp-controller="Game" method="post">
-    <input type="number" name="userGuess" value="" placeholder="Enter your number" />
+    <input type="number" name="userGuess" value="" placeholder="Enter between 1 and 99 number" min="1" max="99" />
     <button type="submit">Send</button>
     <p>
         @if (ViewBag.Msg != null)

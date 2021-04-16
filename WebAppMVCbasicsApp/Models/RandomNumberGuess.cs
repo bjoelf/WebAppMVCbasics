@@ -20,10 +20,10 @@ namespace WebAppMVCbasicsApp.Models
                 return "Yes!! You won!";
             }
         }
-        public static int GetRandom(int seed)
+        public static int GetRandom(int max)
         {
             Random rnd = new Random();
-            return rnd.Next(seed);
+            return rnd.Next(max);
         }
     }
 }

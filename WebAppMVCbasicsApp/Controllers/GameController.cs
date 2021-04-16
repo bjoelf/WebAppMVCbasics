@@ -15,15 +15,15 @@ namespace WebAppMVCbasicsApp.Controllers
         [HttpPost]
         public IActionResult GuessingGame(int userGuess)
         {
-            if (!string.IsNullOrEmpty(HttpContext.Session.GetString("intRnd")) && userGuess > 0)
+            if (!string.IsNullOrEmpty(HttpContext.Session.GetString("intRnd")) && userGuess > 0 && userGuess < 100)
             {
                 int storedRnd = (int)HttpContext.Session.GetInt32("intRnd");
                 string respons = RandomNumberGuess.MatchGuess(Convert.ToInt32(userGuess), storedRnd);
                 ViewBag.Msg = respons;
             }
-            else 
+            else
             {
-                ViewBag.Msg = "Enter a number and hit Submit";
+                ViewBag.Msg = "Enter a number between 1 and 99 and hit Submit";
             }
             return View();
         }

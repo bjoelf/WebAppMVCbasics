@@ -41,19 +41,13 @@ namespace WebAppMVCbasicsApp
 
             app.UseEndpoints(endpoints =>
             {
-
-
-                //Förstår inte hur custom route ska fungera
-
-                /*
+                //Förstår NU hur custom route ska fungera
                 endpoints.MapControllerRoute(
                     name: "specialForFeverCheck",
-                    pattern: "fevercheck",
+                    pattern: "fevercheckcustomroute",
                     defaults: new { controller = "Doctor", action = "FeverCheck" }
                 );
-                */
 
-                //Will return 404 if not found.
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}"

@@ -13,8 +13,8 @@
 
     <header>
         <!--
-    <h1>Logo about here</h1>
-        -->
+        <h1>Logo about here</h1>
+            -->
         <picture>
             <img src="/img/logga.jpg" />
         </picture>
@@ -30,26 +30,21 @@
                     @Html.ActionLink("Projects", "Projects", "Home")
                 </li>
                 <li>
-                    @*  @Html.ActionLink("Fever check", "FeverCheck", "Doctor") *@
-
-                    @*              länken                  Controllern     UI text  *@
-
                     <a asp-action="FeverCheck" asp-controller="Doctor">Fever Check </a>
-
                 </li>
                 <li>
                     <a asp-action="GuessingGame" asp-controller="Game">Guess the correct numer!</a>
                 </li>
-                    </ul>
-                </nav>
-            </header>
+            </ul>
+        </nav>
+    </header>
 
-            <div class="container">
-                @RenderBody()
-            </div>
-            <footer>
-                <p> &copy; Björn Anders Elfvin  @DateTime.Now.ToShortDateString()</p>
+    <div class="container">
+        @RenderBody()
+    </div>
+    <footer>
+        <p> &copy; Björn Anders Elfvin  @DateTime.Now.ToShortDateString()</p>
 
-            </footer>
-        </body>
+    </footer>
+</body>
         </html>
